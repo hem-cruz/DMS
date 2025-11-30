@@ -232,50 +232,50 @@ table td {
 
 /* Responsive */
 @media (max-width: 700px) {
-	header .container {
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-	}
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-	/* Mobile dropdown panel */
-	.nav {
-		position: absolute;
-		top: 56px;
-		left: 50%;
-		transform: translateX(-50%);
-		background-color: #111;
-		padding: 16px 24px;
-		border-radius: 10px;
-		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-		display: none;
-		width: auto;
-		/* shrink to content */
-		max-width: 90%;
-	}
+  /* Dropdown panel, centered under header */
+  .nav {
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #111;
+    padding: 16px 26px;      /* more side padding */
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    display: none;
+    width: auto;
+    max-width: 90%;
+  }
 
-	.nav.open {
-		display: block;
-	}
+  .nav.open {
+    display: block;
+  }
 
-	nav ul {
-		flex-direction: column;
-		gap: 14px;
-		align-items: center;
-		/* center the links */
-	}
+  nav ul {
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;  /* NOT center – lets us shift right */
+  }
 
-	.nav a {
-		display: block;
-		width: 100%;
-		text-align: center;
-	}
+  .nav a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-left: 8px;        /* small push to the right */
+  }
 
-	/* Show hamburger on mobile */
-	.nav-toggle {
-		display: block;
-	}
+  /* Show hamburger on mobile */
+  .nav-toggle {
+    display: block;
+  }
 }
+
 
 
 .hours-grid {
@@ -303,3 +303,4 @@ table td {
 .hours-time.muted {
 	color: #999;
 }
+
