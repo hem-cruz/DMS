@@ -58,13 +58,15 @@ body {
    ========================= */
 
 header {
-  background: rgba(15, 23, 42, 0.9);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(15, 23, 42, 0.55);          /* more transparent */
+  backdrop-filter: blur(14px) saturate(130%);  /* glass effect */
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.28);
   position: sticky;
   top: 0;
   z-index: 40;
 }
+
 
 header .container {
   display: flex;
@@ -475,5 +477,6 @@ table th {
     grid-template-columns: 1fr;
   }
 }
+
 
 
