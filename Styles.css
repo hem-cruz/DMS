@@ -227,20 +227,25 @@ table td {
   header .container {
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 
+  /* Hide desktop layout and turn nav into dropdown panel */
   nav ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
+    align-items: flex-start;          /* left-align text inside panel */
   }
 
   .nav {
     position: absolute;
     top: 56px;
-    right: 0;
-    left: 0;
+    right: 12px;
+    left: 12px;
     background-color: #111;
-    padding: 10px 0;
+    padding: 14px 18px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
     display: none;
   }
 
@@ -248,10 +253,17 @@ table td {
     display: block;
   }
 
+  .nav a {
+    display: block;
+    width: 100%;
+  }
+
+  /* Show hamburger on mobile */
   .nav-toggle {
     display: block;
   }
 }
+
 
 .hours-grid {
   display: grid;
@@ -278,5 +290,6 @@ table td {
 .hours-time.muted {
   color: #999;
 }
+
 
 
