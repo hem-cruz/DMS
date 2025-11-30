@@ -86,7 +86,19 @@
       <div>Address: No.40, Maniammai nagar, Thuvakudimalai north, Trichy -620022</div>
     </div>
   </footer>
+  <script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  }
+</script>
+
 </body>
 </html>
+
 
 
