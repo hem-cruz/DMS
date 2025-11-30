@@ -230,32 +230,35 @@ table td {
     justify-content: space-between;
   }
 
-  /* Hide desktop layout and turn nav into dropdown panel */
-  nav ul {
-    flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;          /* left-align text inside panel */
-  }
-
+  /* Mobile dropdown panel */
   .nav {
     position: absolute;
     top: 56px;
-    right: 12px;
-    left: 12px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #111;
-    padding: 14px 18px;
-    border-radius: 8px;
+    padding: 16px 24px;
+    border-radius: 10px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.3);
     display: none;
+    width: auto;              /* shrink to content */
+    max-width: 90%;
   }
 
   .nav.open {
     display: block;
   }
 
+  nav ul {
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;       /* center the links */
+  }
+
   .nav a {
     display: block;
     width: 100%;
+    text-align: center;
   }
 
   /* Show hamburger on mobile */
@@ -263,6 +266,7 @@ table td {
     display: block;
   }
 }
+
 
 
 .hours-grid {
@@ -290,6 +294,7 @@ table td {
 .hours-time.muted {
   color: #999;
 }
+
 
 
 
